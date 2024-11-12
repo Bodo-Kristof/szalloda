@@ -1,65 +1,79 @@
 <!DOCTYPE html>
-<html lang="hun">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./stilus.css">
-    <title>asd</title>
-
+    <title>Szálloda Foglalási Rendszer</title>
+    <link rel="stylesheet" href="admin.css">
 </head>
 <body>
 
 <div class="container">
-    <div class="form-container">
-        <h2 class="text-center">Login</h2>
-        <form>
-            <div class="mb-3">
-                <label for="loginEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-                <label for="loginPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password" required>
-            </div>
-            <button type="submit" class="btn btn-primary w-100">Log In</button>
-            <div class="text-center mt-3">
-                <a href="#">Forgot password?</a>
-            </div>
-            <div class="text-center mt-2">
-                <p>Don't have an account? <a href="#register">Create new</a></p>
-            </div>
-        </form>
-    </div>
+    <!-- Sidebar -->
+    <nav class="sidebar">
+        <h2>Szálloda Admin</h2>
+        <ul>
+            <li><a href="#" onclick="showContent('dashboard')">Dashboard</a></li>
+            <li><a href="#" onclick="showContent('reservations')">Foglalások</a></li>
+            <li><a href="#" onclick="showContent('rooms')">Szobák</a></li>
+            <li><a href="#" onclick="showContent('guests')">Vendégek</a></li>
+            <li><a href="#" onclick="showContent('reports')">Jelentések</a></li>
+            <li><a href="#" onclick="showContent('settings')">Beállítások</a></li>
+        </ul>
+    </nav>
 
-    <div class="form-container mt-4" id="register">
-        <h2 class="text-center">Register</h2>
-        <form>
-            <div class="mb-3">
-                <label for="registerName" class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="registerName" placeholder="Enter your full name" required>
-            </div>
-            <div class="mb-3">
-                <label for="registerEmail" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email" required>
-            </div>
-            <div class="mb-3">
-                <label for="registerPassword" class="form-label">Password</label>
-                <input type="password" class="form-control" id="registerPassword" placeholder="Create a password" required>
-            </div>
-            <div class="mb-3">
-                <label for="confirmPassword" class="form-label">Confirm Password</label>
-                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password" required>
-            </div>
-            <button type="submit" class="btn btn-success w-100">Register</button>
-            <div class="text-center mt-2">
-                <p>Already have an account? <a href="#login">Log In</a></p>
-            </div>
-        </form>
-    </div>
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <div id="dashboard" class="content-section">
+            <h1>Dashboard</h1>
+            <p>Üdvözöljük a szálloda admin felületén!</p>
+        </div>
+
+        <div id="reservations" class="content-section">
+            <h1>Foglalások</h1>
+            <form>
+                <label for="guestName">Vendég neve:</label>
+                <input type="text" id="guestName" placeholder="Vendég neve">
+
+                <label for="roomType">Szoba típusa:</label>
+                <select id="roomType">
+                    <option value="single">Egyágyas</option>
+                    <option value="double">Kétágyas</option>
+                    <option value="suite">Lakosztály</option>
+                </select>
+
+                <label for="checkIn">Bejelentkezés dátuma:</label>
+                <input type="date" id="checkIn">
+
+                <label for="checkOut">Kijelentkezés dátuma:</label>
+                <input type="date" id="checkOut">
+
+                <button type="button" onclick="makeReservation()">Foglalás Létrehozása</button>
+            </form>
+        </div>
+
+        <div id="rooms" class="content-section">
+            <h1>Szobák</h1>
+            <p>Itt jelennek meg a szálloda szobái és elérhetőségük.</p>
+        </div>
+
+        <div id="guests" class="content-section">
+            <h1>Vendégek</h1>
+            <p>Vendégek listája és kezelése.</p>
+        </div>
+
+        <div id="reports" class="content-section">
+            <h1>Jelentések</h1>
+            <p>Részletes jelentések megtekintése.</p>
+        </div>
+
+        <div id="settings" class="content-section">
+            <h1>Beállítások</h1>
+            <p>A rendszer beállításainak kezelése.</p>
+        </div>
+    </main>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
