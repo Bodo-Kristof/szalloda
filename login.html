@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./stilus.css">
+    <title>Login</title>
+
+</head>
+<body>
+
+<div class="container">
+    <div class="form-container">
+        <h2 class="text-center">Bejelentkezés</h2>
+        <form>
+            <div class="mb-3">
+                <label for="loginEmail" class="form-label">Email cím</label>
+                <input type="email" class="form-control" id="loginEmail" placeholder="Írd be az email címed" required>
+            </div>
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label">Jelszó</label>
+                <input type="password" class="form-control" id="loginPassword" placeholder="Írd be a jelszavad" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Bejelentkezés</button>
+            <div class="text-center mt-3">
+                <a href="#">Elfelejtetted a jelszavad?</a>
+            </div>
+            <div class="text-center mt-2">
+                <p>Nincs még fiókod? <a href="#register">Hozz létre egyet!</a></p>
+            </div>
+        </form>
+    </div>
+
+    <div class="form-container mt-4" id="register">
+        <h2 class="text-center">Regisztráció</h2>
+        <form>
+            <div class="mb-3">
+                <label for="registerName" class="form-label">Teljes neved</label>
+                <input type="text" class="form-control" id="registerName" placeholder="Írd be a teljes neved" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerEmail" class="form-label">Email címed</label>
+                <input type="email" class="form-control" id="registerEmail" placeholder="Írd be az email címed" required>
+            </div>
+            <div class="mb-3">
+                <label for="registerPassword" class="form-label">Jelszavad</label>
+                <input type="password" class="form-control" id="registerPassword" placeholder="Írd be a jelszavad" required>
+            </div>
+            <div class="mb-3">
+                <label for="confirmPassword" class="form-label">Jelszavad ismét</label>
+                <input type="password" class="form-control" id="confirmPassword" placeholder="Írd be a jelszavad ismét" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Regisztráció</button>
+            <div class="text-center mt-2">
+                <p>Már van fiókod? <a href="#login">Jelentkezz be!</a></p>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

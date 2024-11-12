@@ -1,13 +1,117 @@
+/* General reset and dark background */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
 body {
-    background-color: #f8f9fa;
+    background-color: #1a1a2e; /* Dark background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #e0e0e0; /* Light text color */
 }
+
+/* Container styles */
 .container {
-    max-width: 600px;
-    margin-top: 50px;
+    display: flex; /* Flex layout for side-by-side panels */
+    gap: 20px; /* Space between the two panels */
+    max-width: 850px; /* Adjust the width to fit both forms side by side */
+    width: 100%;
+    padding: 15px;
+    justify-content: center;
 }
+
 .form-container {
+    background-color: #222831; /* Darker form background */
     padding: 20px;
-    background: white;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    flex: 1; /* Make both forms equal width */
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+/* Label styling with margin */
+.form-label {
+    margin-bottom: 5px;
+    text-align: left;
+    display: block;
+    color: #a1a1a1; /* Softer gray for labels */
+}
+
+/* Input fields */
+.form-control {
+    background-color: #393e46; /* Dark gray input background */
+    border: 1px solid #4e4e4e; /* Darker border */
+    color: #ffffff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.form-control:focus {
+    border-color: #00adb5; /* Teal color for focus effect */
+    box-shadow: none;
+}
+
+/* Button styles */
+.btn-primary, .btn-success {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    width: 100%;
+    color: #ffffff;
+    background-color: #00adb5; /* Teal button color */
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover, .btn-success:hover {
+    background-color: #007a7f; /* Darker teal on hover */
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+    color: #00adb5;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #007a7f;
+}
+
+/* Text and spacing */
+.text-center {
+    color: #b0b0b0; /* Softer gray for links and additional text */
+    font-size: 14px;
+}
+
+.mt-3, .mt-2 {
+    margin-top: 10px !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 850px) {
+    .container {
+        flex-direction: column; /* Stack panels vertically on smaller screens */
+        gap: 20px;
+        padding: 10px;
+    }
+    .form-container {
+        padding: 15px;
+    }
 }
