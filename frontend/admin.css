@@ -101,3 +101,9 @@ form button {
 form button:hover {
     background-color: #575757;
 }
+
+li {
+    border: 2px solid grey;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+}
