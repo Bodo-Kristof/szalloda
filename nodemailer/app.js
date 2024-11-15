@@ -1,5 +1,10 @@
 const  nodeMailer = require('nodemailer');
 
+const html = `
+        <h1>Regisztráció</h1>
+        <p>Sikeresen regisztrált az oldalunkra!</p>
+`;
+//Email küldő beállítása
 const transporter = nodeMailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -7,5 +12,19 @@ const transporter = nodeMailer.createTransport({
     auth: {
         user: 'balatonyi.martin@gmail.com',
         pass: 'ntuy sevp ybwl jydg',
+    }
+});
+
+const  mailOptions = {
+    to: 'balatoni.martin@szbiszeged.hu',
+    subject: 'Sikeres regisztráció',
+    text: html
+}
+
+transporter.sendMail(mailOptions, function (error, info) {
+    if (error) {
+        console.error(error);
+    } else {
+        console.log('Email sent');
     }
 });
