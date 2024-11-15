@@ -2,7 +2,7 @@ const  nodeMailer = require('nodemailer');
 
 const html = `
         Regisztráció
-        Sikeresen regisztrált az oldalunkra!
+        Sikeresen regisztrált az oldalunkra!!
 `;
 //Email küldő beállítása
 const transporter = nodeMailer.createTransport({
