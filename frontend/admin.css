@@ -22,6 +22,7 @@ body {
     background-color: #333;
     color: #fff;
     width: 200px;
+    height: 100vh;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -52,6 +53,24 @@ body {
 
 .sidebar ul li a:hover {
     background-color: #575757;
+}
+
+ /* Date and Time at the bottom of the sidebar */
+.sidebar .date-time {
+    bottom: 20px;
+    left: 20px;
+    display: flex; /* Flexbox használata */
+    align-items: center; /* Vertikális középre igazítás */
+    font-size: 14px;
+    color: white;
+}
+
+.sidebar .date-time span {
+    margin-right: 5.8px; /* Több távolság az ikon és a dátum között */
+}
+
+.material-symbols-outlined {
+    font-size: 20px; /* Az ikon méretének növelése */
 }
 
 /* Main content area */

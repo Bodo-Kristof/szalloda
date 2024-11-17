@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Szálloda Foglalási Rendszer</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="stylesheet" href="./admin.css">
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric', weekday: 'long', hour: '2-digit', minute: '2-digit' };
+            const dateTimeString = now.toLocaleString('hu-HU', options);
+            document.getElementById('dateTime').innerText = dateTimeString;
+        }
+    
+        setInterval(updateDateTime, 60000); // 1 percenként frissít
+        window.onload = updateDateTime; // Betöltéskor is frissít
+    </script>
+
 </head>
 <body>
 
@@ -20,6 +33,13 @@
             <li><a href="#" onclick="showContent('reports')">Jelentések</a></li>
             <li><a href="#" onclick="showContent('settings')">Beállítások</a></li>
         </ul>
+        <div class="date-time">
+            <span class="material-symbols-outlined">
+                calendar_today
+            </span>
+            <span id="dateTime"></span>
+        </div>
+
     </nav>
 
     <!-- Main Content Area -->
