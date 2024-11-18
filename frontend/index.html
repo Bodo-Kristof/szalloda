@@ -33,6 +33,7 @@
             <li><a href="#" onclick="showContent('reports')">Jelentések</a></li>
             <li><a href="#" onclick="showContent('settings')">Beállítások</a></li>
         </ul>
+        <!--Calendarium ev/ho/nap/ido-->
         <div class="date-time">
             <span class="material-symbols-outlined">
                 calendar_today
@@ -42,13 +43,13 @@
 
     </nav>
 
-    <!-- Main Content Area -->
+    <!--Osszegzo felulet.-->
     <main class="main-content">
         <div id="dashboard" class="content-section">
             <h1>Dashboard</h1>
             <p>Üdvözöljük a szálloda admin felületén!</p>
         </div>
-
+    <!--Foglalasok felvetele-->
         <div id="reservations" class="content-section">
             <h1>Foglalások</h1>
             <form>
@@ -71,22 +72,22 @@
                 <button type="button" onclick="makeReservation()">Foglalás Létrehozása</button>
             </form>
         </div>
-
+        <!--Szobak es hogz mikor szabadok-->
         <div id="rooms" class="content-section">
             <h1>Szobák</h1>
             <p>Itt jelennek meg a szálloda szobái és elérhetőségük.</p>
         </div>
-
+        <!--A vendegek es hogy melyik szobaban vannak-->
         <div id="guests" class="content-section">
             <h1>Vendégek</h1>
             <p>Vendégek listája és kezelése.</p>
         </div>
-
+        <!--Jelentesek problemak a szallodaban/teruleten-->
         <div id="reports" class="content-section">
             <h1>Jelentések</h1>
             <p>Részletes jelentések megtekintése.</p>
         </div>
-
+        <!--Beallitasok a rendszer mukodesehez-->
         <div id="settings" class="content-section">
             <h1>Beállítások</h1>
             <p>A rendszer beállításainak kezelése.</p>

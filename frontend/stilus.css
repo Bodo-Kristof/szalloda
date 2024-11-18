@@ -1,117 +1,121 @@
-/* General reset and dark background */
+
+/* Általános alapbeállítás és sötét háttér */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* Minden elem alapértelmezett margó és padding eltávolítása, box-model alkalmazása */
 }
 
 body {
-    background-color: #1a1a2e; /* Dark background color */
+    background-color: #1a1a2e; /* Sötét háttérszín beállítása */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    color: #e0e0e0; /* Light text color */
+    min-height: 100vh; /* Teljes magasságot lefed */
+    color: #e0e0e0; /* Világos színű szöveg a sötét háttérhez */
 }
 
-/* Container styles */
+/* Konténer beállításai */
 .container {
-    display: flex; /* Flex layout for side-by-side panels */
-    gap: 20px; /* Space between the two panels */
-    max-width: 850px; /* Adjust the width to fit both forms side by side */
+    display: flex; /* Flexbox használata a formák mellérendezéséhez */
+    gap: 20px; /* Két panel közötti távolság */
+    max-width: 850px; /* Maximális szélesség beállítása a formák mellérendezéséhez */
     width: 100%;
     padding: 15px;
-    justify-content: center;
+    justify-content: center; /* Középre igazítás */
 }
 
+/* Formák konténerének beállításai */
 .form-container {
-    background-color: #222831; /* Darker form background */
+    background-color: #222831; /* Formák háttere sötétebb színű */
     padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    flex: 1; /* Make both forms equal width */
-    text-align: center;
+    border-radius: 8px; /* Lekerekített sarkok */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Árnyék a formák körül */
+    flex: 1; /* Egyforma szélességű formák */
+    text-align: center; /* Szövegek középre igazítása */
 }
 
-/* Heading */
+/* Címek beállításai */
 h2 {
-    color: #ffffff;
-    margin-bottom: 20px;
-    font-weight: 600;
+    color: #ffffff; /* Fehér színű cím */
+    margin-bottom: 20px; /* Alsó margó */
+    font-weight: 600; /* Félkövér betűtípus */
 }
 
-/* Label styling with margin */
+/* Címkék stílusa */
 .form-label {
-    margin-bottom: 5px;
-    text-align: left;
+    margin-bottom: 5px; /* Alsó margó a címkéknek */
+    text-align: left; /* Balra igazított szöveg */
     display: block;
-    color: #a1a1a1; /* Softer gray for labels */
+    color: #a1a1a1; /* Szürke színű címkék */
 }
 
-/* Input fields */
+/* Input mezők stílusa */
 .form-control {
-    background-color: #393e46; /* Dark gray input background */
-    border: 1px solid #4e4e4e; /* Darker border */
-    color: #ffffff;
-    border-radius: 5px;
+    background-color: #393e46; /* Sötét szürke háttér az input mezőknek */
+    border: 1px solid #4e4e4e; /* Sötétebb színű szegély */
+    color: #ffffff; /* Fehér szöveg a mezőkben */
+    border-radius: 5px; /* Lekerekített sarkok */
     padding: 10px;
-    font-size: 16px;
-    transition: border-color 0.3s;
+    font-size: 16px; /* Betűméret */
+    transition: border-color 0.3s; /* Animáció a szegély színének változásához */
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 15px; /* Alsó margó */
 }
 
+/* Fókusz állapot a mezőkben */
 .form-control:focus {
-    border-color: #00adb5; /* Teal color for focus effect */
-    box-shadow: none;
+    border-color: #00adb5; /* Kiemelt szegély szín: tengerzöld */
+    box-shadow: none; /* Árnyék eltávolítása fókuszáláskor */
 }
 
-/* Button styles */
+/* Gombok stílusa */
 .btn-primary, .btn-success {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    width: 100%;
-    color: #ffffff;
-    background-color: #00adb5; /* Teal button color */
-    border: none;
-    transition: background-color 0.3s;
+    padding: 10px 20px; /* Gombok belső térköze */
+    font-size: 16px; /* Betűméret a gombokon */
+    border-radius: 5px; /* Lekerekített sarkok */
+    width: 100%; /* Gombok szélessége 100%-os */
+    color: #ffffff; /* Fehér szöveg szín */
+    background-color: #00adb5; /* Tengerzöld háttérszín */
+    border: none; /* Nincs szegély */
+    transition: background-color 0.3s; /* Animáció a háttérszín változása esetén */
 }
 
+/* Hover effektus gomboknál */
 .btn-primary:hover, .btn-success:hover {
-    background-color: #007a7f; /* Darker teal on hover */
+    background-color: #007a7f; /* Sötétebb tengerzöld szín hover állapotban */
 }
 
-/* Link styles */
+/* Linkek stílusa */
 a {
-    text-decoration: none;
-    color: #00adb5;
-    transition: color 0.3s;
+    text-decoration: none; /* Linkek aláhúzása eltávolítva */
+    color: #00adb5; /* Tengerzöld színű linkek */
+    transition: color 0.3s; /* Szín változása animálva */
 }
 
 a:hover {
-    color: #007a7f;
+    color: #007a7f; /* Linkek színének sötétebb árnyalata hover esetén */
 }
 
-/* Text and spacing */
+/* Középre igazított szövegek és távolságok */
 .text-center {
-    color: #b0b0b0; /* Softer gray for links and additional text */
-    font-size: 14px;
+    color: #b0b0b0; /* Szürke színű szövegek */
+    font-size: 14px; /* Kisebb betűméret */
 }
 
 .mt-3, .mt-2 {
-    margin-top: 10px !important;
+    margin-top: 10px !important; /* Felső margó beállítása, ha szükséges */
 }
 
-/* Responsive adjustments */
+/* Reszponzív beállítások (kisebb képernyőkön) */
 @media (max-width: 850px) {
     .container {
-        flex-direction: column; /* Stack panels vertically on smaller screens */
+        flex-direction: column; /* Vertikálisan rendezi a formákat kisebb képernyőkön */
         gap: 20px;
         padding: 10px;
     }
     .form-container {
-        padding: 15px;
+        padding: 15px; /* Kisebb padding a formák körül */
     }
 }
